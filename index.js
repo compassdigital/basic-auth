@@ -113,9 +113,9 @@ function parse (string, isURI = false) {
   let userPass = null;
 
   if (isURI) {
-    var userPass = USER_PASS_REGEXP.exec(decodeURIComponent(decodeBase64(match[1])))
+    userPass = USER_PASS_REGEXP.exec(decodeURIComponent(decodeBase64(match[1])))
   } else {
-    var userPass = USER_PASS_REGEXP.exec(decodeBase64(match[1]))
+    userPass = USER_PASS_REGEXP.exec(decodeBase64(match[1]))
   }
 
   if (!userPass) {
